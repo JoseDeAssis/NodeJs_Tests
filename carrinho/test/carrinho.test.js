@@ -39,23 +39,23 @@ describe("Testes no carrinho", () => {
     expect(englobaErroCarrinho).toThrowError("Carrinho de compras vazio");
   });
 
-  // it("Deve ter frete", () => {
-  //   const carrinho = new Carrinho();
-  //   carrinho.adicionaFrete(50);
+  it("Deve ter frete", () => {
+    const carrinho = new Carrinho();
+    carrinho.adicionaFrete(50);
 
-  //   expect(carrinho.frete).toBe(50);
-  // });
+    expect(carrinho.frete).toBe(50);
+  });
 
-  // it("Deve calcular o frete", () => {
-  //   const banana = new Item("banana", 1.99, 2);
-  //   const apple = new Item("maça", 6.79, 1.2);
+  it("Deve calcular o frete", () => {
+    const banana = new Item("banana", 1.99, 2);
+    const apple = new Item("maça", 6.79, 1.2);
 
-  //   const carrinho = new Carrinho();
-  //   carrinho.adiciona(banana);
-  //   carrinho.adiciona(apple);
+    const carrinho = new Carrinho();
+    carrinho.adiciona(banana);
+    carrinho.adiciona(apple);
 
-  //   expect(carrinho.calculaTotal()).toBe(12.128);
-  // });
+    expect(carrinho.calculaTotal()).toBe(12.128);
+  });
 
   it("Deve finalizar compras corretamente", () => {
     const banana = new Item("banana", 1.99, 2);
